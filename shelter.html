@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Shelter Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for Upload Form Container */
+        .upload-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .upload-form-container h1 {
+            text-align: center;
+            color: #0041C7; /* Using user's preferred blue shade */
+        }
+
+        /* Styling for Form Labels and Input Fields */
+        .upload-form-container label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #0160C9; /* Another preferred shade */
+            font-weight: bold;
+        }
+
+        .upload-form-container input[type="text"],
+        .upload-form-container input[type="number"],
+        .upload-form-container textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: #E0D9C3; /* Subtle background color */
+            transition: border-color 0.3s;
+        }
+
+        .upload-form-container input[type="text"]:focus,
+        .upload-form-container input[type="number"]:focus,
+        .upload-form-container textarea:focus {
+            border-color: #3ACBE8; /* Highlight border on focus */
+            outline: none;
+        }
+
+        .upload-form-container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Submit Button Styling */
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0041C7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .submit-button:hover {
+            background-color: #0160C9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title" onclick="window.location.href='index.html';">Emergency Shelter Finder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shelter.html">Shelters</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a class="login-button" href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Shelter Upload Form Section -->
+    <div class="upload-form-container">
+        <h1>Upload Shelter Information</h1>
+        <form id="shelter-upload-form" action="submit_shelter.php" method="POST">
+            <label for="shelter-name">Shelter Name:</label>
+            <input type="text" id="shelter-name" name="shelter_name" required placeholder="Enter the shelter's name">
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required placeholder="City, State, or specific address">
+
+            <label for="contact-info">Contact Information:</label>
+            <input type="text" id="contact-info" name="contact_info" required placeholder="Phone number or email">
+
+            <label for="capacity">Capacity:</label>
+            <input type="number" id="capacity" name="capacity" placeholder="Approximate number of people accommodated">
+
+            <label for="description">Additional Details:</label>
+            <textarea id="description" name="description" placeholder="Any other relevant details..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Upload Shelter</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
