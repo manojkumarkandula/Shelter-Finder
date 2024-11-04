@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Shelter Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-title" onclick="window.location.href='index.html';">Emergency Shelter Finder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shelter.html">Shelters</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a class="login-button" href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Emergency Shelter Finder</h1>
+        <div class="search-container">
+            <input type="text" class="search-bar" id="search-input" placeholder="Search for shelters...">
+            <button class="search-button" id="search-button">Search</button>
+        </div>
+        <div id="results" class="results-container"></div> <!-- Results container -->
+    </div>
+
+    <div class="content-container">
+        <div class="left-half">
+            <h2>Heading 1</h2>
+            <pre id="text1">This is some sample text under Heading 1.
+It maintains the exact spacing
+and line breaks as given in the code.
+Feel free to add more details!</pre>
+        </div>
+        <div class="right-half">
+            <h2>Heading 2</h2>
+            <pre id="text2">This is some sample text under Heading 2.
+Each line and spacing is preserved
+as per the code provided.
+You can also add additional information!</pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
