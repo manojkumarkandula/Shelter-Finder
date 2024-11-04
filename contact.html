@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for Contact Form Container */
+        .contact-form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form-container h1 {
+            text-align: center;
+            color: #0041C7;
+        }
+
+        .contact-form-container label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #0160C9;
+            font-weight: bold;
+        }
+
+        .contact-form-container input[type="text"],
+        .contact-form-container input[type="email"],
+        .contact-form-container textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: #E0D9C3;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form-container input[type="text"]:focus,
+        .contact-form-container input[type="email"]:focus,
+        .contact-form-container textarea:focus {
+            border-color: #3ACBE8;
+            outline: none;
+        }
+
+        .contact-form-container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Submit Button Styling */
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0041C7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .submit-button:hover {
+            background-color: #0160C9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-title" onclick="window.location.href='index.html';">Emergency Shelter Finder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shelter.html">Shelters</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a class="login-button" href="login.html">Login/Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form-container">
+        <h1>Contact Us</h1>
+        <form id="contact-form" action="submit_contact.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required placeholder="Enter the subject">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
