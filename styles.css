@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D7EDD5; /* Updated background color */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures full height for flex */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A5C8D1; /* Updated header color */
+    color: white;
+    padding: 1rem;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.header-title {
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-align: left; /* Align title to the left */
+    flex: 1; /* Allow title to take available space */
+}
+
+nav {
+    flex: 1; /* Allow navigation to take remaining space */
+    text-align: right; /* Align navigation to the right */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+nav ul li {
+    margin: 0 10px; /* Adjusted margin for better spacing */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effects */
+    padding: 10px 20px; /* Increased padding for better touch targets */
+    border-radius: 5px; /* Added border radius for a nicer look */
+}
+
+nav a:hover {
+    background-color: #FEDDD5; /* Hover effect color */
+    transform: scale(1.05); /* Scale up effect on hover */
+}
+
+.login-button {
+    background-color: #0041C7; /* Custom color for Login/Register */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px; /* Increased padding for better touch targets */
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #1CA3DE; /* Hover effect for the custom button */
+}
+
+.hero {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.search-container {
+    display: flex; /* Use flexbox to align the search bar and button */
+    justify-content: center; /* Center the container */
+}
+
+.search-bar {
+    width: 30%; /* Further reduced width of the search bar */
+    padding: 10px;
+    margin-right: 5px; /* Space between search bar and button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 20px; /* Padding for the search button */
+    border: none;
+    background-color: #0041C7; /* Button color */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #1CA3DE; /* Hover effect for the search button */
+}
+
+.results-container {
+    display: none; /* Initially hidden */
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #E0D9C3; /* Background for results */
+    border-radius: 5px; /* Rounded corners */
+    max-width: 80%; /* Limit width */
+    margin: 1rem auto; /* Center results container */
+    text-align: left; /* Left align text */
+}
+
+.result-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Divider between results */
+}
+
+.result-item:last-child {
+    border-bottom: none; /* Remove last item's bottom border */
+}
+
+.content-container {
+    display: flex;
+    justify-content: center; /* Center the content */
+    margin: auto; /* Center container */
+    margin-top: auto; /* Pushes content to the bottom */
+    padding: 2rem 0; /* Add vertical padding */
+}
+
+.left-half, .right-half {
+    flex: 1; /* Each half takes equal space */
+    text-align: center; /* Center text in each half */
+    padding: 1rem; /* Add padding for aesthetics */
+}
+
+.left-half {
+    border-right: 5px solid #ccc; /* Increased width of the dividing line */
+}
+
+h2 {
+    margin-bottom: 2rem; /* Increased space between heading and text */
+    font-size: 2rem; /* Increased heading size */
+}
+
+pre {
+    font-size: 1.2rem; /* Increased size of the text */
+    margin: 1rem 0; /* Added margin for spacing */
+}
+
+p {
+    margin: 0; /* Remove default margin */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #E0D9C3; /* Updated footer color */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 80%; /* Adjust width for mobile */
+    }
+
+    .content-container {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .left-half, .right-half {
+        border-right: none; /* Remove divider on mobile */
+        border-bottom: 1px solid #ccc; /* Add bottom divider on mobile */
+    }
+}
